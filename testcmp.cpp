@@ -1,16 +1,26 @@
 #include <iostream>
-#include     "mycomplex.h"
+#include "mycomplex.h"
+
 using namespace std;
-int main(){//тестирование класса комплексных чисел
- Complex A,B(-4), C(23.0, 45.9);
-cout<<A <<","<< B<<","<<C <<endl; A=B+C;
-cout<<"A=B+C,A="<< A<<endl;
 
-Complex M=B-C;
-cout<< "M = B - C, M = " << M << endl;cout<<"M*A="<<M*A<<endl;
-cout<<"M/4.45="<<M/4.45<<endl;
+int main() {
+    Complex complexA, complexB(-4), complexC(23.0, 45.9);
 
-    Complex D;
-  	cout<<"Enter complex number D = "; cin >>D;
- A+=C+D;
-cout << "D = " << D << "\nA = " << A << endl;return 0;}
+    cout << complexA << "," << complexB << "," << complexC << endl;
+    complexA = complexB + complexC;
+    cout << "A = B + C, A = " << complexA << endl;
+
+    Complex complexM = complexB - complexC;
+    cout << "M = B - C, M = " << complexM << endl;
+    cout << "M * A = " << complexM * complexA << endl;
+    cout << "M / 4.45 = " << complexM / 4.45 << endl;
+
+    Complex complexD;
+    cout << "Enter complex number D = ";
+    cin >> complexD;
+
+    complexA += complexC + complexD;
+    cout << "D = " << complexD << "\nA = " << complexA << endl;
+
+    return 0;
+}
